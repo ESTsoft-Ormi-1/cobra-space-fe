@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Cobra space</title>
+    <link rel="stylesheet" href="./static/css/styles.css" type="text/css">
+    <script src="./static/js/includeHTML.js"></script>
+    <!-- Favicon -->
+  </head>
+  <body>
+    <!-- 헤더 -->
+    <header include-html="./static/html/header.html"></header>
+    
+    <!-- 글 상세보기 내용 -->
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="card" style="height: 600px;">
+          <div class="card-body">
+            <h2 class="card-title">글 제목</h2>
+            <p>글 올린 사람 • 글 태그 • 올린 일시 • 추천 수</p>
+            <hr>
+            <p>글 내용 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et justo eget ex bibendum elementum. Sed ac feugiat nisi, eu viverra velit. Sed quis tristique eros, vel tincidunt purus. Curabitur aliquet vitae nunc et ultricies...</p>
+          </div>
+        </div>
+      </div>
+        
+      <!-- 채팅창 -->
+      <div class="container col-lg-4">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="card" style="height: 600px;">
+              <div class="card-header">
+              </div>
+              <div class="card-body overflow-hidden">
+                <div id="chat_messages" class="w-100 h-100 border-0 ">
+                  <div class="chat-message"><div>채팅을 입력하고 엔터키를 치면 채팅이 표시가 됩니다.</div></div>
+                  <div class="chat-message me"><div>네</div></div>
+                </div>
+                
+              </div>
+              <div class="card-footer">
+                <form id="message_form">
+                  <input type="text" name="message" class="form-control" autofocus="autofocus" autocomplete="off"/>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- 푸터 -->
+    <footer include-html="./static/html/footer.html"></footer>
+
+    <script src="./static/js/chat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+      includeHTML();
+    </script>
+  </body>
+</html>
