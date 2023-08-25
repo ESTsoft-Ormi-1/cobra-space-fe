@@ -13,8 +13,25 @@
     <!-- Favicon -->
   </head>
   <body>
+    <!-- 헤더 -->
     <header include-html="./static/html/header.html"></header>
+    
+    <!-- 메인 -->
     <div class="px-4 pt-5 my-5 text-center border-bottom">
+      <!-- 플로팅 요소 -->
+      <!-- <div class="floating-container">
+        <div class="floating-element floating">
+          <img class="me-2" src="./static/img/floating1.svg" class="bi" width="auto" height="72">
+        </div>
+      
+        <div class="floating-element floating">
+          <img class="me-2" src="./static/img/floating2.svg" class="bi" width="auto" height="72">
+        </div>
+      
+        <div class="floating-element floating">
+          <img class="me-2" src="./static/img/floating3.svg" class="bi" width="auto" height="72">
+        </div>
+      </div> -->
       <h1 class="display-4 fw-bold"><strong>COBRA</strong> SPACE</h1>
       <h2 class="display-4 fw-bold mb-4">코드와 아이디어의<br>
         새로운 차원을 열다.</h2>
@@ -31,10 +48,13 @@
         </div>
       </div>
     </div>
+
+    <!-- 푸터 -->
     <footer include-html="./static/html/footer.html"></footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+      includeHTML();
+    </script>
   </body>
-  <script>
-    includeHTML();
-  </script>
 </html>

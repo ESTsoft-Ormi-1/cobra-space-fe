@@ -3,3 +3,60 @@
 body {
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
+
+.floating {
+    animation: floatingAnimation 3s ease infinite;
+}
+
+@keyframes floatingAnimation {
+    0%, 100% {
+    transform: translateY(0);
+    }
+    50% {
+    transform: translateY(-10px);
+    }
+}
+
+.floating-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.floating-element {
+    width: 30%; /* Adjust the width as needed */
+    position: absolute;
+}
+
+.floating-element:nth-child(1) {
+    left: 50%; /* Adjust the left position for the first element */
+}
+
+.floating-element:nth-child(2) {
+    left: 40%; /* Adjust the left position for the second element */
+}
+
+.floating-element:nth-child(3) {
+    left: 10%;
+    top: 45%; /* Adjust the left position for the third element */
+}
+
+.chat-message > div {
+    background-color: #3b3b3b;
+    color: #e1e1e1;
+    border-radius: 0.8em;
+    padding: 0.4em;
+    margin: 0.4em 0;
+    display: inline-block;
+    white-space: pre-wrap;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+.chat-message.me {
+    text-align: right;
+}
+.chat-message.me > div {
+    background-color: #1f8cff;
+    color: #fff;
+    text-align: left;
+}
