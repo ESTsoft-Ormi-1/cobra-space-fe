@@ -1,5 +1,6 @@
 const handlers = {
     chat_messages_tag: null,
+    chat_containter: null,
     ws: null,
     retry: 0,
 
@@ -116,6 +117,8 @@ const handlers = {
         //     type: "chat.message",
         //     message: message
         // }))
+
+        this.scrollToBottom();
     },
     update_user_list() {
         const html = [...this.username_set]
@@ -139,6 +142,9 @@ const handlers = {
 
         const modal = new bootstrap.Modal(modal_ele);
         modal.show();
+    },
+    scrollToBottom() {
+        this.chat_messages_tag.scrollTop = this.chat_messages_tag.scrollHeight;
     },
 };
 

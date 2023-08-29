@@ -20,7 +20,7 @@ function includeHTML(callback) {
                     }
                     /*remove the attribute, and call this function once more:*/
                     elmnt.removeAttribute("include-html");
-                    includeHTML(callback);
+                    includeHTML(callback)
                 }
             };
             xhr.open("GET", file, true);
@@ -30,6 +30,6 @@ function includeHTML(callback) {
         }
     }
     setTimeout(function() {
-        callback();
+
     }, 0);
 }

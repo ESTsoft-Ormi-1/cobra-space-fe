@@ -41,6 +41,10 @@ body {
     top: 45%; /* Adjust the left position for the third element */
 }
 
+.chat-container {
+    overflow-y:scroll;
+}
+
 .message-content {
     background-color: #3b3b3b;
     color: #e1e1e1;
