@@ -41,7 +41,7 @@ body {
     top: 45%; /* Adjust the left position for the third element */
 }
 
-.chat-message > div {
+.message-content {
     background-color: #3b3b3b;
     color: #e1e1e1;
     border-radius: 0.8em;
@@ -55,8 +55,34 @@ body {
 .chat-message.me {
     text-align: right;
 }
-.chat-message.me > div {
+
+.chat-message.me > .message-content {
     background-color: #1f8cff;
     color: #fff;
     text-align: left;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+}
+.user-profile img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.owner-badge {
+    background-color: #ffcc00;
+    color: #ffffff;
+    padding: 2px 5px;
+    font-size: 12px;
+    border-radius: 3px;
+    margin-left: 5px;
+}
+
+.timestamp {
+    font-size: 12px;
+    color: #888888;
 }

@@ -39,12 +39,23 @@
               <div class="card-header">
               </div>
               <div class="card-body overflow-hidden">
-                <div id="chat_messages" class="w-100 h-100 border-0 ">
-                  <div class="chat-message"><div>채팅을 입력하고 엔터키를 치면 채팅이 표시가 됩니다.</div></div>
-                  <div class="chat-message me"><div>네</div></div>
+                <div id="chat_messages" class="w-100 h-100 border-0">
+                    <div class="chat-message">
+                        <div class="user-profile">
+                            <img src="http://via.placeholder.com/30x30
+                            " alt="프로필 사진">
+                            <span class="username">사용자2</span>
+                            <span class="owner-badge">방장</span>
+                        </div>
+                        <div class="message-content">채팅을 입력하고 엔터키를 치면 채팅이 표시가 됩니다.</div>
+                        <div class="timestamp">2023-08-29 10:00 AM</div>
+                    </div>
+                    <div class="chat-message me">
+                        <div class="message-content">네</div>
+                        <div class="timestamp">2023-08-29 10:05 AM</div>
+                    </div>
                 </div>
-                
-              </div>
+            </div>
               <div class="card-footer">
                 <form id="message_form">
                   <input type="text" name="message" class="form-control" autofocus="autofocus" autocomplete="off"/>
