@@ -18,9 +18,6 @@ function includeHTML(callback) {
                     if (this.status == 404) {
                         elmnt.innerHTML = "Page not found.";
                     }
-                    /*remove the attribute, and call this function once more:*/
-                    elmnt.removeAttribute("include-html");
-                    includeHTML(callback);
                 }
             };
             xhr.open("GET", file, true);
