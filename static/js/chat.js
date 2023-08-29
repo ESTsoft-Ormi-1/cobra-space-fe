@@ -91,6 +91,7 @@ const handlers = {
         }
 
         const wrapper = document.createElement("div");
+        wrapper.className = "message-content";
         wrapper.textContent = message;
         element.appendChild(wrapper);
 
