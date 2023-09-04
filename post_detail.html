@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./static/css/styles.css" type="text/css">
     <script src="./static/js/includeHTML.js"></script>
     <!-- Favicon -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="icon" sizes="72x72" href="./static/img/icon/favicon.png">
     <!-- 마크다운 라이브러리 -->
     <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
@@ -17,6 +18,8 @@
     <!-- 코드 하이라이트 라이브러리 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="./static/css/styles.css" type="text/css">
+
 
     <!-- and it's easy to individually load additional languages -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
@@ -29,10 +32,12 @@
     <div class="container mt-5">
       <div class="row">
         <div class="col-lg-8">
-          <div class="card" style="height: 700px;">
+          <div class="card" style="height: 650px;">
             <div class="card-body" style="overflow-y: auto;">
-              <h2 class="card-title">글 제목</h2>
-              <p>글 올린 사람 • 글 태그 • 올린 일시 • 추천 수</p>
+              <h2 class="card-title" id="post-title">글 제목</h2>
+              <p>
+                <span class="badge bg-secondary me-auto" id="post-tags">태그목록</span><br>
+                <span id="writer-nickname">작성자 닉네임</span> • <span id="created-at">올린 일시</span> • <span id="hit-count">조회수</span> views</p>
               <hr>
               <div id="markdown-container">
               </div>
@@ -43,12 +48,12 @@
         <div class="container col-lg-4">
           <div class="row">
             <div class="col-sm-12">
-              <div class="card" style="height: 700px;">
+              <div class="card" style="height: 650px;">
                 <div class="card-header">
-                  게시물 제목
+                  채팅방
                 </div>
                 <div id="chat_messages" class="card-body chat-container w-100 h-100 border-0">
-                  <div class="chat-message">
+                  <!-- <div class="chat-message">
                     <div class="user-profile">
                       <img src="https://placehold.co/30x30
                         " alt="프로필 사진">
@@ -61,7 +66,7 @@
                   <div class="chat-message me">
                     <div class="message-content">네</div>
                     <div class="timestamp">2023-08-29 10:05 AM</div>
-                  </div>
+                  </div> -->
                 </div>
                 <div class="card-footer">
                   <form id="message_form">
@@ -77,61 +82,18 @@
     <!-- 푸터 -->
     <footer include-html="./static/html/footer.html"></footer>
     <script src="./static/js/chat.js"></script>
+    <script src="./static/js/postDetail.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script>
       includeHTML();
     </script>
+    
   <script>
     const {markedHighlight} = globalThis.markedHighlight;
 
-    const markdownText = `
-## Markdown Example
-This is *italic* and this is **bold**.
-- List item 1
-- List item 2
-
-\`\`\`javascript
-function includeHTML(callback) {
-    var z, i, elmnt, file, xhr;
-    /*loop through a collection of all HTML elements:*/
-    z = document.getElementsByTagName("*");
-    for (i = 0; i < z.length; i++) {
-        elmnt = z[i];
-        /*search for elements with a certain atrribute:*/
-        file = elmnt.getAttribute("include-html");
-        //console.log(file);
-        if (file) {
-            /*make an HTTP request using the attribute value as the file name:*/
-            xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function() {
-                if (this.readyState == 4) {
-                    if (this.status == 200) {
-                        elmnt.innerHTML = this.responseText;
-                    }
-                    if (this.status == 404) {
-                        elmnt.innerHTML = "Page not found.";
-                    }
-                    /*remove the attribute, and call this function once more:*/
-                    elmnt.removeAttribute("include-html");
-                    includeHTML(callback)
-                }
-            };
-            xhr.open("GET", file, true);
-            xhr.send();
-            /*exit the function:*/
-            return;
-        }
-    }
-    setTimeout(function() {
-
-    }, 0);
-}
-\`\`\`
-`;
-
       // marked 라이브러리를 사용하여 Markdown을 HTML로 변환하고 삽입
-      document.getElementById('markdown-container').innerHTML = marked.parse(markdownText);
     </script>
     <script>hljs.highlightAll();</script>
+    <script src="./static/js/app.js"></script>
   </body>
 </html>

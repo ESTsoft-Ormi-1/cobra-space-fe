@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Cobra Space</title>
+    <link rel="stylesheet" href="./static/css/styles.css" type="text/css">
+    <script src="./static/js/includeHTML.js"></script>
+    <!-- Favicon -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="icon" sizes="72x72" href="./static/img/icon/favicon.png">
+  </head>
+  <body>
+    <!-- 헤더 -->
+    <header include-html="./static/html/header.html"></header>
+    
+    <!-- 메인 -->
+    <main class="container mt-5">
+      <h1>프로필 수정</h1>
+  
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">프로필 사진</h2>
+          <img id="profile-picture" src="https://placehold.co/142x142" alt="Profile Picture" class="rounded-circle">
+          <input type="file" accept="image/*" id="profile-picture-input" class="form-control mt-2">
+          <button id="upload-picture-button" class="btn btn-primary mt-2">사진 업로드</button>
+
+          <h2 class="card-title mt-3">프로필 정보</h2>
+          <div class="mb-3">
+            <label for="nickname-input" class="form-label">닉네임:</label>
+            <input type="text" id="nickname-input" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label for="bio-input" class="form-label">Bio:</label>
+            <textarea id="bio-input" class="form-control"></textarea>
+          </div>
+          <button id="update-profile-button" class="btn btn-primary">업데이트</button>
+        </div>
+      </div>
+      <h2 class="mt-4">친구 요청</h2>
+      <div class="card">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            친구 요청 1
+            <button class="btn btn-success">수락</button>
+            <button class="btn btn-danger">거부</button>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            친구 요청 2
+            <button class="btn btn-success">수락</button>
+            <button class="btn btn-danger">거부</button>
+          </li>
+        </ul>
+      </div>
+      <h2 class="mt-4">친구 목록</h2>
+      <div class="card">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">친구 1</li>
+          <li class="list-group-item">친구 2</li>
+          <!-- Add more friend list items here -->
+        </ul>
+      </div>
+    </main>
+    <!-- 푸터 -->
+    <footer include-html="./static/html/footer.html"></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+      includeHTML();
+    </script>
+    <script src="./static/js/app.js"></script>
+  </body>
+</html>
