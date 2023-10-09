@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Cobra Space</title>
+    <link rel="stylesheet" href="./static/css/styles.css" type="text/css">
+    <script src="./static/js/includeHTML.js"></script>
+    <!-- Favicon -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="icon" sizes="72x72" href="./static/img/icon/favicon.png">
+    <!-- 마크다운 라이브러리 -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked-highlight/lib/index.umd.js"></script>
+    <!-- 코드 하이라이트 라이브러리 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="./static/css/styles.css" type="text/css">
+
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+  </head>
+  
+  <body>
+    <!-- 헤더 -->
+    <header include-html="./static/html/header.html"></header>
+    <!-- 글 상세보기 내용 -->
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="card" style="height: 650px;">
+            <div class="card-body" style="overflow-y: auto;">
+              <h2 class="card-title" id="post-title">글 제목</h2>
+              <p>
+                <span class="badge bg-secondary me-auto" id="post-tags">태그목록</span><br>
+                <span id="writer-nickname">작성자 닉네임</span> • <span id="created-at">올린 일시</span> • <span id="hit-count">조회수</span> views</p>
+              <hr>
+              <div id="markdown-container">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 채팅창 -->
+        <div class="container col-lg-4">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="card" style="height: 650px;">
+                <div class="card-header">
+                  채팅방
+                </div>
+                <div id="chat_messages" class="card-body chat-container w-100 h-100 border-0">
+                  <!-- <div class="chat-message">
+                    <div class="user-profile">
+                      <img src="https://placehold.co/30x30
+                        " alt="프로필 사진">
+                      <span class="username">사용자2</span>
+                      <span class="owner-badge">방장</span>
+                    </div>
+                    <div class="message-content">채팅을 입력하고 엔터키를 치면 채팅이 표시가 됩니다.</div>
+                    <div class="timestamp">2023-08-29 10:00 AM</div>
+                  </div>
+                  <div class="chat-message me">
+                    <div class="message-content">네</div>
+                    <div class="timestamp">2023-08-29 10:05 AM</div>
+                  </div> -->
+                </div>
+                <div class="card-footer">
+                  <form id="message_form">
+                    <input type="text" name="message" class="form-control" autofocus="autofocus" autocomplete="off"/>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 푸터 -->
+    <footer include-html="./static/html/footer.html"></footer>
+    <script src="./static/js/chat.js"></script>
+    <script src="./static/js/postDetail.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+      includeHTML();
+    </script>
+    
+  <script>
+    const {markedHighlight} = globalThis.markedHighlight;
+
+      // marked 라이브러리를 사용하여 Markdown을 HTML로 변환하고 삽입
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script src="./static/js/app.js"></script>
+  </body>
+</html>

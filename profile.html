@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Cobra Space</title>
+    <link rel="stylesheet" href="./static/css/styles.css" type="text/css">
+    <script src="./static/js/includeHTML.js"></script>
+    <!-- Favicon -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="icon" sizes="72x72" href="./static/img/icon/favicon.png">
+  </head>
+  <body>
+    <!-- 헤더 -->
+    <header include-html="./static/html/header.html"></header>
+    
+    <!-- 메인 -->
+    <main class="container mt-5">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="card" style="height: 650px;">
+              <div class="card-body">
+                <h2 class="card-title">프로필 사진</h2>
+                <img id="profile-picture" style="width: 142px; height: 142px; object-fit: cover;" src="https://placehold.co/142x142" alt="Profile Picture" class="rounded-circle">
+
+                <h2 class="card-title mt-3">프로필 정보</h2>
+                <div class="mb-3">
+                  <label for="nickname" class="form-label">닉네임:</label>
+                  <p type="text" id="nickname" class="form-control"></p>
+                </div>
+                <div class="mb-3">
+                  <label for="bio" class="form-label">Bio:</label>
+                  <p id="bio" class="form-control">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero necessitatibus repellat sequi distinctio amet asperiores facere deleniti cumque ullam numquam illo sint velit at fugit odit, facilis dignissimos, possimus est!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container col-lg-4">
+              <div class="card" style="height: 650px;">
+                <div class="card-body">
+                  <h2 class="mt-4">친구 요청</h2>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        친구 요청: 김민준
+                        <button class="btn btn-success">수락</button>
+                        <button class="btn btn-danger">거부</button>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        친구 요청: 홍길동
+                        <button class="btn btn-success">수락</button>
+                        <button class="btn btn-danger">거부</button>
+                      </li>
+                    </ul>
+                  <h2 class="mt-4">친구 목록</h2>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">James</li>
+                      <li class="list-group-item">Mark</li>
+                      <!-- Add more friend list items here -->
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- 푸터 -->
+    <footer include-html="./static/html/footer.html"></footer>
+    <script src="./static/js/profile.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+      includeHTML();
+    </script>
+    <script src="./static/js/app.js"></script>
+  </body>
+</html>
