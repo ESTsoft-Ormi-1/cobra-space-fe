@@ -27,10 +27,13 @@ const handlers = {
     },
     onopen() {
         console.log("웹소켓 서버와 접속");
+        const msg_box = document.getElementById('msg');
+        msg_box.readOnly = false;
     },
     onclose(event) {
         const close_code = event.code;
-
+        const msg_box = document.getElementById('msg');
+        msg_box.readOnly = true;
         if (close_code === 4000) {
             this.modal("채팅창이 삭제되었습니다. 대기실로 이동합니다.", () => {
                 // window.location.href = "{% url 'chat:index'%}";
@@ -43,9 +46,11 @@ const handlers = {
                 setTimeout(() => {
                     this.reconnect();
                     console.log(`[${this.retry}] 접속 재시도...`);
+                    msg_box.value = `[${this.retry}] 접속 재시도...`;
                 }, 1000 * this.retry)
             } else {
                 console.log("웹소켓 서버에 접속할 수 없습니다. 대기실로 이동합니다.");
+                msg_box.value = "웹소켓 서버에 접속할 수 없습니다.";
                 // window.location.href = "{% url 'chat:index' %}";
             }
         }
@@ -169,6 +174,7 @@ function initChat(post) {
     // ws_url = "ws://api.cobraspace.xyz/ws/chat/1/chat/"
     console.log(ws_url);
     user = post.current_user;
+    console.log(user);
 
     handlers.init();
     handlers.connect(ws_url, user);
